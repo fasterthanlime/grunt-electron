@@ -1,5 +1,5 @@
 {
-  "name": "grunt-electron",
+  "name": "grunt-electron-itchio",
   "version": "5.0.0",
   "description": "Package Electron apps",
   "license": "MIT",
@@ -32,6 +32,7 @@
     "electron-packager": "^8.0.0"
   },
   "devDependencies": {
+    "electron-rebuild": "^1.5.7",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^1.0.0",
