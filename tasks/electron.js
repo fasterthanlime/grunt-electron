@@ -1,6 +1,6 @@
 'use strict';
 const electronPackager = require('electron-packager');
-const rebuild = require('electron-rebuild');
+const rebuild = require('electron-rebuild').default;
 
 module.exports = grunt => {
 	grunt.registerMultiTask('electron', 'Package Electron apps', function () {
@@ -9,12 +9,13 @@ module.exports = grunt => {
 		const options = Object.assign({}, this.options(), {
 			afterCopy: [
 				(buildPath, electronVersion, platform, arch, callback) => {
-					grunt.log('Rebuilding native dependencies');
+					grunt.log.writeln('Rebuilding native dependencies');
 					rebuild(buildPath, electronVersion, arch, [], true)
-						.then(() => done())
+						.then(() => callback())
 						.catch((e) => {
 							grunt.warn('Building modules didn\'t work!');
 							grunt.fatal(e);
+                            callback();
 						});
 				}
 			]
