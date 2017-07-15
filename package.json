@@ -1,6 +1,6 @@
 {
   "name": "grunt-electron-itchio",
-  "version": "5.0.1",
+  "version": "5.1.0",
   "description": "Package Electron apps",
   "license": "MIT",
   "repository": "sindresorhus/grunt-electron",
@@ -29,7 +29,8 @@
     "apps"
   ],
   "dependencies": {
-    "electron-packager": "^8.0.0"
+    "electron-packager": "^8.0.0",
+    "rimraf": "^2.6.1"
   },
   "devDependencies": {
     "electron-rebuild": "^1.5.7",
