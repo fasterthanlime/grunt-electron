@@ -1,6 +1,6 @@
 {
   "name": "grunt-electron-itchio",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "Package Electron apps",
   "license": "MIT",
   "repository": "sindresorhus/grunt-electron",

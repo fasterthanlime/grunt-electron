@@ -13,7 +13,7 @@ module.exports = grunt => {
 				(buildPath, electronVersion, platform, arch, callback) => {
 					grunt.log.writeln('Rebuilding native dependencies');
 					rebuild(buildPath, electronVersion, arch, [], true)
-						.then(() => function () {
+						.then(() => {
 							const binPath = path.join(buildPath, 'node_modules', '.bin');
 							grunt.log.writeln('Wiping ' + binPath + ' to make npm@5.3.0 happy');
 							rimraf.sync(binPath);
